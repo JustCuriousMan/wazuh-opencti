@@ -1,0 +1,13 @@
+<group name="sysmon,sysmon_eid22_detections,windows,">  
+  <rule id="100240" level="4">
+     <if_sid>61650</if_sid>
+     <description>DNS query for $(win.eventdata.queryName)</description>
+  </rule>
+</group>
+
+<group name="sysmon,sysmon_eid1_detections,windows,">  
+  <rule id="100241" level="4">
+     <if_sid>61603</if_sid>
+     <description>Process execution $(win.eventdata.originalFileName)</description>
+  </rule>
+</group>
