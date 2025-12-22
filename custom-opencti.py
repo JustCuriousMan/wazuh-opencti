@@ -441,7 +441,7 @@ def query_opencti(alert, url, token):
         # group. These keys are probably used by other decoders as well:
         elif 'ids' in groups:
             # Check if DNS data exists in the alert
-             if 'dns' in alert['data'] and 'query' in alert['data']['dns'] and alert ['data']['dns']['query']:
+            if 'dns' in alert['data'] and 'query' in alert['data']['dns'] and alert ['data']['dns']['query']:
                 # Extract rrname from DNS query
                 rrname = alert['data']['dns']['query'][0].get('rrname ', '')
                 logger.debug(f'Extract rrname to check: {rrname}')
