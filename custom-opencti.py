@@ -766,7 +766,7 @@ def query_opencti(alert, url, token):
 
     new_alerts = []
     try:
-        response = requests.post(url, headers=query_headers, json=api_json_body)
+        response = requests.post(url, headers=query_headers, json=api_json_body, verify=False)
     # Create an alert if the OpenCTI service cannot be reached:
     except ConnectionError:
         logger.debug('Failed to connect to {}'.format(url))
